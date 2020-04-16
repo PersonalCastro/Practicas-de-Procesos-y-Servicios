@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
+  <endpoint implementation="Login.Login" name="Login" url-pattern="/Login"/>
+  <endpoint implementation="Calculadora.Calculadora" name="Calculadora" url-pattern="/Calculadora"/>
+  <endpoint implementation="Mensaje.Mensaje" name="Mensaje" url-pattern="/Mensaje"/>
+  <endpoint implementation="Short.Short" name="Short" url-pattern="/Short"/>
+</endpoints>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-mar-2020 13:53:03 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Hibernate.User" table="user" catalog="cristomessenger" optimistic-lock="version">
+        <id name="idUser" type="string">
+            <column name="id_user" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" />
+        </property>
+        <property name="surname1" type="string">
+            <column name="surname1" length="45" />
+        </property>
+        <property name="surname2" type="string">
+            <column name="surname2" length="45" />
+        </property>
+        <property name="photo" type="string">
+            <column name="photo" length="45" />
+        </property>
+        <property name="state" type="java.lang.Integer">
+            <column name="state" />
+        </property>
+        <set name="messagesForIdUserOrig" table="message" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_user_orig" length="45" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.Message" />
+        </set>
+        <set name="friendsForIdUserOrig" table="friend" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_user_orig" length="45" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.Friend" />
+        </set>
+        <set name="messagesForIdUserDest" table="message" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_user_dest" length="45" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.Message" />
+        </set>
+        <set name="friendsForIdUserDest" table="friend" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_user_dest" length="45" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.Friend" />
+        </set>
+    </class>
+</hibernate-mapping>

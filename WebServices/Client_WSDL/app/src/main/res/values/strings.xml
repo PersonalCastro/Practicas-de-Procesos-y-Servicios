@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Cliente WebServices</string>
+    <string name="tab_text_0">Login</string>
+    <string name="tab_text_1">Calculadora</string>
+    <string name="tab_text_2">Ordenar Vector</string>
+
+    <!-- FRAGMENT ORDENAR -->
+    <string name="txt_login">Introduce tu Login</string>
+    <string name="txt_password">Introduce tu Contraseña</string>
+    <string name="placeholder_login">Login</string>
+    <string name="placeholder_password">Contraseña</string>
+    <string name="send">Enviar</string>
+
+
+    <!-- FRAGMENT CALCULADORA -->
+    <string name="numero_1">First Number</string>
+    <string name="numero_2">Second Number</string>
+
+    <string name="suma">Sumar</string>
+    <string name="resta">Restar</string>
+    <string name="multiplicar">Multiplicar</string>
+    <string name="dividir">Dividir</string>
+
+    <string name="respuesta"> It equals to: </string>
+
+    <!-- FRAGMENT ORDENAR -->
+    <string name="explanation">Introduce 5 números separados por espacios</string>
+    <string name="placeholder_example">2 4 6 0 1</string>
+    <string name="result_short">Vector Ordenado: </string>
+
+    <!-- FRAGMENT ORDENAR -->
+    <string name="placeholder_correo">Correo</string>
+    <string name="placeholder_Asunto">Asunto</string>
+    <string name="placeholder_texto">Escribe aqui tu mensaje</string>
+
+</resources>

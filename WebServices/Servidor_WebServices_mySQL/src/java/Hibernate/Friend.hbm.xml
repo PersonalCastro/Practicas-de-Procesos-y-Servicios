@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-mar-2020 13:53:03 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Hibernate.Friend" table="friend" catalog="cristomessenger" optimistic-lock="version">
+        <composite-id name="id" class="Hibernate.FriendId">
+            <key-property name="idUserOrig" type="string">
+                <column name="id_user_orig" length="45" />
+            </key-property>
+            <key-property name="idUserDest" type="string">
+                <column name="id_user_dest" length="45" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="userByIdUserOrig" class="Hibernate.User" update="false" insert="false" fetch="select">
+            <column name="id_user_orig" length="45" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userByIdUserDest" class="Hibernate.User" update="false" insert="false" fetch="select">
+            <column name="id_user_dest" length="45" not-null="true" />
+        </many-to-one>
+        <property name="acceptRequest" type="java.lang.Integer">
+            <column name="accept_request" />
+        </property>
+    </class>
+</hibernate-mapping>

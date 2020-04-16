@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="Login">
+      <implementation-class>Login.Login</implementation-class>
+    </service>
+    <service name="Calculadora">
+      <implementation-class>Calculadora.Calculadora</implementation-class>
+    </service>
+    <service name="Mensaje">
+      <implementation-class>Mensaje.Mensaje</implementation-class>
+    </service>
+    <service name="Short">
+      <implementation-class>Short.Short</implementation-class>
+    </service>
+  </services>
+  <clients/>
+  <jsr109>false</jsr109>
+</jax-ws>
